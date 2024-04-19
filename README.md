@@ -2,9 +2,6 @@
 ```
 nest start
 ```
-### Seed database
-
-
 
 ### Install redis
 ```
@@ -15,16 +12,15 @@ brew install redis
 ```
 brew install colima
 brew install docker
-```
-### Start Colima
-```
-colima start
-docker ps
-```
-### Start Redis with Bloom Filters
 
 ```
-docker run -p 6379:6379 --name redis-redisbloom redislabs/rebloom:latest
+### Start Colima in order to start docker
+```
+colima start
+```
+### Start Redis with Bloom Filters and Cuckoo Filters
+
+```
 docker run -p 6379:6379 -it --rm redis/redis-stack-server:latest
 ```
 
