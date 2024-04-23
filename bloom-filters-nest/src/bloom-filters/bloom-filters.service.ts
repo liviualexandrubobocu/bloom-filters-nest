@@ -1,4 +1,3 @@
-// src/bloom-filters/bloom-filters.service.ts
 import { Injectable } from '@nestjs/common';
 import { InjectRedis } from '@nestjs-modules/ioredis';
 import Redis from 'ioredis';
@@ -17,5 +16,10 @@ export class BloomFiltersService {
 
   async createFilter(key: string, errorRate: number, initialSize: number): Promise<void> {
     await this.redis.call('BF.RESERVE', key, errorRate, initialSize);
+  }
+
+  async getBloomFilterMemory(): Promise<number> {
+    const info = await this.redis.call('MEMORY', 'USAGE', 'categories:products');
+    return parseInt(info as string, 10);
   }
 }

@@ -15,7 +15,12 @@ export class CuckooFiltersService {
     return (await this.redis.call('CF.EXISTS', key, element)) === 1;
   }
 
-  async createFilter(key: string, errorRate: number, initialSize: number): Promise<void> {
+  async createFilter(key: string, initialSize: number): Promise<void> {
     await this.redis.call('CF.RESERVE', key, initialSize);
+  }
+
+  async getCuckooFilterMemory(): Promise<number> {
+    const info = await this.redis.call('MEMORY', 'USAGE', 'categories:values');
+    return parseInt(info as string, 10);
   }
 }

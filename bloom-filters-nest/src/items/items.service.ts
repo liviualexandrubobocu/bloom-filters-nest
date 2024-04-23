@@ -1,7 +1,4 @@
-// src/items/items.service.ts
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Item } from './item.entity';
 import { ItemsRepository } from './items.repository';
 
 @Injectable()

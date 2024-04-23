@@ -24,6 +24,12 @@ colima start
 docker run -p 6379:6379 -it --rm redis/redis-stack-server:latest
 ```
 
+### Clean Docker and Redis
+
+```
+docker system prune --all
+```
+
 ### Seed cache and DB
 ```
 curl -X POST 'http://localhost:3000/seeder/seed?entries=100000'

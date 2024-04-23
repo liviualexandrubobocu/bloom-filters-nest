@@ -1,4 +1,3 @@
-// src/seeder/seeder.controller.ts
 import { Controller, Post, Query } from '@nestjs/common';
 import { SeederService } from './seeder.service';
 

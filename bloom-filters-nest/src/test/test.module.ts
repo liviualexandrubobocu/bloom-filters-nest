@@ -1,4 +1,3 @@
-// src/items/items.module.ts
 import { Module } from '@nestjs/common';
 import { BloomFiltersService } from 'src/bloom-filters/bloom-filters.service';
 import { CuckooFiltersService } from 'src/cuckoo-filters/cuckoo-filters.service';

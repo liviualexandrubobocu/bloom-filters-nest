@@ -1,4 +1,3 @@
-// src/seeder/seeder.module.ts
 import { Module } from '@nestjs/common';
 import { SeederService } from './seeder.service';
 import { SeederController } from './seeder.controller';
