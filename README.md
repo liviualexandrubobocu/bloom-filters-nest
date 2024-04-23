@@ -1,7 +1,7 @@
 ## Bloom Filters, Cuckoo Filters in Nest.js && Redis
 
 A repository used to showcase the usage of bloom filters and cuckoo filters with Redis.
-Testing an item will prin a JSON structure that will showcase benchmarks for doing search over Redis Cache/ Bloom / Cuckoo Filters
+Seeding and then testing with below commands will print a JSON structure that will showcase benchmarks for doing search over Redis Cache/ Bloom / Cuckoo Filters
 
 ## Commands
 
